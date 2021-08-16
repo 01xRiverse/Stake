@@ -1,0 +1,10 @@
+.Gainers{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.Loosers{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}

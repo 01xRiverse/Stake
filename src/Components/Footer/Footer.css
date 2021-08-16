@@ -1,0 +1,25 @@
+.footer{
+    background-color: black;
+    margin:0px auto;
+    padding: 20px 20px 20px 20px;
+}
+.text{
+    color:white;
+    text-align:center;
+
+}
+.link{
+    cursor: pointer;
+    color: white;
+
+}
+.container{
+    padding-top: 5vh;
+    padding-left:7vh;
+    border: 2px cyan solid;
+}
+.list-unstyled li h6 {
+    text-align:center;
+    
+    
+}
