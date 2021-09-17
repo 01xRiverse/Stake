@@ -1,17 +1,27 @@
 import React from 'react'
-import Carousel from './Carousel/Carousel'
-import { SliderData } from './Carousel/Data';
+import {NewsCompDetails } from '../../Shared/NewsCompDetails'
 import './Home.css'
 import Market_status from './Market_status/Market_status';
+import News from './News/News';
+import Typical from 'react-typical'
+
+
+
 function Home() {
     return (
-        <div>
-            <Carousel slides={SliderData}></Carousel>
+        <React.Fragment>
+            {NewsCompDetails.map((Detail,index)=> {
+                return(
+                    <React.Fragment>
+                        <News  Services={Detail}></News>
+                        
+                    </React.Fragment>
+                )
+            })}
+         
             <Market_status></Market_status>
-            
-            
-        </div>
+        </React.Fragment>
     )
-}
+} 
 
 export default Home

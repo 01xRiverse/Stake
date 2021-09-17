@@ -1,85 +1,192 @@
-.Nav_items{
-    display:flex;
-    background-color: black;
+.Back-image{
+    background:linear-gradient(to right, rgba(0,0,0,0.7),rgba(0,0,0,0.1)),url("https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+.image-header{
+    font-size: clamp(2.5rem,10vw,5rem);
+    margin-bottom:1rem;
+    box-shadow: 3px 5px #F0E68C;
+    letter-spacing: 3px;
+}
+.image-content{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    max-height: 100%;
+    padding:0 2rem;
+    width: 750px;
+    text-overflow: hidden;
+    color:white;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: bold;
+}
+.image-text{
+    font-size:2rem;
+    margin-bottom: 2rem;
+}
+
+
+
+
+.NavChange{
+    background:rgb(23, 25, 36);
+    width: 100%;
+    position: relative;
+    position: fixed;
+    z-index: 11;
+    height: 80px;
+    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
+}
+.NavSame{
+    background: transparent;
+    width: 100%;
+    position: relative;
+    position: fixed;
+    z-index: 11;
     height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
 }
-.Nav_logo{
-    color: white;
-    justify-self: start;
-    margin-left: 20px;
-    cursor:pointer;
 
-}
 .Nav_icon{
     color: white;
     font-size: 4rem;
     margin-right: 0.5rem;
     cursor:pointer;
 }
-.Nav_menu{
+.navbar-logo {
+    color: #fff;
+    justify-self: flex-start;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.nav-menu {
     display: grid;
-    grid-template-columns: repeat(5,auto);
-    grid-gap: 15px;
-    list-style:none;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+    list-style: none;
     text-align: center;
     width: 70vw;
     justify-content: end;
-    margin-right: 2rem;
+    
 }
-.Nav-item{
-    color:white;
+
+.nav-links {
+    color: white;
     text-decoration: none;
-    padding:0.5rem 1rem;
+    padding: 0.5rem 1rem;
 }
-.Nav-item:hover{
-    background-color:thistle;
-    border-radius:4px;
-    transition:all 0.2s ease-out;
+
+.nav-links:hover {
+    background-color: white;
+    color:black;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
 }
-.Hamb_menu{
-    display: static;
+
+.fa-bars {
+    color: #fff;
 }
-.Hamb_times{
+/* 
+.nav-links-mobile {
+    display: none;
+} */
+
+.menu-icon {
     display: none;
 }
 
-@media screen and (max-width:960px){
-    .Nav_items{
-        position:relative;
-    }
-    .Nav_menu{
+@media screen and (max-width: 900px) {
+    
+
+    .nav-menu {
         display: flex;
         flex-direction: column;
-        width:100%;
-        height: 500px;
+        width: 100%;
+        height: 430px;
         position: absolute;
-        top:80px;
-        left:-100%;
+        top: 0px;
+        left: -150%;
         opacity: 1;
+        top:80px;
         transition: all 0.5s ease;
+    }
 
+    .nav-menu.active {
+        background: rgb(23, 25, 36);
+        left: 0;
+        opacity: 1;
+        display: flex;
+        transition: all .3s ease;
     }
-    .Nav_menu.active{
-        background: black;
-        left:0;
-        z-index: 1;
+
+    .nav-links {
+        text-align: center;
+        padding: 1.5rem;
+        width: 100%;
+        display: table;
     }
-    .Hamb_menu{
-        display:static;
+
+    .nav-links:hover {
+        background-color: white;
+        border-radius: 6px;
     }
-    .Hamb_times{
-        display: block;    
+
+    .navbar-logo {
+        justify-self: center;
+        text-align: center;
+    
+    }
+    .Nav_icon{
+        justify-self: flex-start;
+    }
+
+    .menu-icon {
+        display: block;
         position: absolute;
-        transform: translate(-100%,60%);
-        top:0;
-        right:0;
-        color:white;
-        font-size:2rem;
+        top: -10px;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
         cursor: pointer;
     }
 
+    .fa-times {
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    /* .nav-links-mobile {
+        display: block;
+        text-align: center;
+        padding: 1.5rem;
+        margin: 2rem auto;
+        border-radius: 4px;
+        width: 80%;
+        background: #4ad9e4;
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.5rem;
+    }
+
+    .nav-links-mobile:hover {
+        background: #fff;
+        color: #6568F4;
+        transition: 250ms;
+    } */
+
+    .image-content{
+        width: 95vw;
+    }
 }
-    

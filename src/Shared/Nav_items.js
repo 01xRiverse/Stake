@@ -1,28 +1,29 @@
-export const Nav_items=[
+export const MenuItems = [
     {
-        item:"Home",
-        url:"/",
-        class:"Nav-item",
-        status:"Null"
+        title: 'Home',
+        url: '/',
+        cName: 'nav-links'
     },
     {
-        item:"Mags",
-        url:"/Mags",
-        class:"Nav-item",
-        status:"Null"
+        title: 'Services',
+        url: '/Services',
+        cName: 'nav-links'
+    },
+    {
+        title: 'Pricing',
+        url: '/Pricing',
+        cName: 'nav-links'
+    },
+    {
+        title: 'Contact Us',
+        url: '/Contact_us',
+        cName: 'nav-links'
+    },
+    {
+        title:'Login',
+        url:"/Login",
+        cName:'button-resp'
     },
     
-    {
-        item:"Market",
-        url:"/Market",
-        class:"Nav-item",
-        status:"Null"
-    },
-    {
-        item:"Pricing",
-        url:"/Pricing",
-        class:"Nav-item",
-        status:"Null"
-    }
-    
+
 ]

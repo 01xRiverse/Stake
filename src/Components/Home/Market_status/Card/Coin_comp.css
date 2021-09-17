@@ -1,84 +1,65 @@
-.card {
-	background-color: white;
-	color: #272727;
+.coin-card {
+	
+	
+	margin: 25px;
+	border-radius: 10px;
 	padding: 20px;
-	border-radius: 10px;
-	border: 0px;
-	border-color: tomato;
-	border-style: solid;
-	transition: 200ms;
-    max-width: 380px;
-}
-
-.card:hover {
-	transition: 200ms;
-	border: 3px;
-	border-color: tomato;
-	border-style: solid;
-}
-
-.card-header {
 	display: flex;
-	flex-wrap: nowrap;
-	align-items: center;
-
+	background-color: rgb(50, 53, 70);
+	color: white;	
+	flex-direction: column;
+	
+	
+   
 }
-
-.profile {
-	width: 2.5rem;
-	height: 2.5rem;
-	background-color: tomato;
-	border-radius: 50%;
-	margin: 10px;
-	font-size: 20pt;
-	text-align: center;
-	font-weight: bold;
-	color: white;
-	justify-content: center;
+.coin-card:hover{
+	transform: scale(1.03);
+	transform:translateY(-5px);
+	transition: 0.2s ease-in-out;
+	cursor:pointer;
 }
-
-.letter {
-	vertical-align: middle;
-}
-
-.card-title-group {
-	justify-content: center;
-}
-
-.card-title {
-	flex: 0.5;
-	font-size: large;
-	margin-bottom: 0;
-	margin-top: 0;
-}
-.card-date {
-	flex: 0.3;
-	font-size: small;
-	margin-top: 0;
-}
-
-.card-image {
-	border-radius: 10px;
-	margin-bottom: 10px;
-	margin-top: 10px;
-}
-.card-like-icon {
-	height: 25px;
-}
-
-.card-text {
-	width: 350px;
-	font-size: medium;
-}
-
-.card-like-bar {
+.coin-icon-graph{
 	display: flex;
+	justify-content: space-between;
+	
+	align-items:center;
+	cursor: pointer;
+
+}
+.coin-title{
+	color:white;
+	font-size:1.2rem;
+
+}
+
+.graph-filter-green{
+	filter: hue-rotate(85deg) saturate(80%) brightness(0.85);
+}
+
+.graph-filter-red{
+	filter: hue-rotate(300deg) saturate(210%) brightness(0.7) contrast(170%);
+}
+.coin-cap-green{
+	display: flex;
+	flex-direction: row;
 	align-items: center;
-	margin-top: 20px;
+	color: #16c784;
+	min-width: 100%;
 	justify-content: space-between;
 }
-
-.like-text {
-	font-size: small;
-	margin-left: 10px;
+.coin-cap-red{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: #ea3943;
+	min-width: 100%;
+	justify-content: space-between;
+}
+.coin-status{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+.IoMdArrowDropdown{
+	color:#ea3943;
 }
