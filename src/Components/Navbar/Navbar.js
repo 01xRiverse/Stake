@@ -1,10 +1,11 @@
 import React, { useState ,useEffect} from 'react';
 import { MenuItems } from "../../Shared/Nav_items"
 import {GiSteak} from 'react-icons/gi'
-import  './Login/Login.css'
+import './Login/Login.css'
 import './Navbar.css'
 import UniversalButton from '../UniversalButton/UniversalButton';
-
+import {useHistory } from 'react-router-dom';
+import {Link} from 'react-scroll'
 
 const Navbar=() =>{
     const [scrollNav,setScrollNav]=useState(false)
@@ -17,6 +18,18 @@ const Navbar=() =>{
             setScrollNav(false)
         }
     }
+    const LoginButton = () => {
+        const history = useHistory();
+    
+        const handleClick = () => {
+            history.push("/Login");
+        }
+    
+        return (
+            <div onClick={handleClick} className="adjust"><a className="button" >Login</a></div>
+        );
+    }
+
     useEffect(()=>{
         window.addEventListener('scroll',changeNav);
     },[]);
@@ -26,7 +39,7 @@ const Navbar=() =>{
     }
 
         return(
-            <div className="Back-image">
+            <div className="Back-image" id="home">
                 <nav onScroll={changeNav} className={clicked || scrollNav? "NavChange ":'NavSame  '}  >
                 <GiSteak  className="Nav_icon"></GiSteak>
                 <h1 className="navbar-logo">Stake</h1>
@@ -37,10 +50,9 @@ const Navbar=() =>{
                     {MenuItems.map((item, index) => {
                         return (
                             <li key={index}>
-                               <div className="adjust-resp" > <a className={item.cName} href={item.url}>
-                                    
+                               <div className="adjust-resp" > <Link className={item.cName}  smooth={true} duration={100} to={item.url}>
                                     <span>{item.title}</span>
-                                    </a></div>
+                               </Link></div>
                             </li>
                         )
                     })}
@@ -48,7 +60,8 @@ const Navbar=() =>{
                    
                     
                 </ul>
-                <div className="adjust"><a className="button" >Login</a></div>
+                <LoginButton to="/Login"></LoginButton>
+                
                 
             </nav>
                 <div className="image-content">

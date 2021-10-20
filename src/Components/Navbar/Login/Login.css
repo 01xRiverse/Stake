@@ -12,10 +12,9 @@
 
   .button{
     display:flex;
-    color:black;
+    color:white;
     justify-content:center;
     align-items:center;
-    background-color: white;
     white-space:nowrap;
     padding:10px 22px;
     font-size:1.2rem;
@@ -26,16 +25,16 @@
   
   }
   .button:hover{
-    background-color:black;
-    color:white;
+    background-color:white;
+    color:black;
   }
 
 .button-resp{
   display: none;
 }  
 .button-resp:hover{
-    background-color:black;
-    color:white;
+    background-color:white;
+    color:black;
   }
 
 @media screen and (max-width :900px) {
@@ -45,10 +44,9 @@
   .button-resp{
     
     display:flex;
-    color:black;
+    color:white;
     justify-content:center;
     align-items:center;
-    background-color:white;
     white-space:nowrap;
     height: 4rem;
     width: 10rem;

@@ -1,6 +1,6 @@
-import Logo1 from './Blockchain.svg'
-import Logo2 from './Analysis.svg'
-import Logo3 from './Gem.svg'
+import Logo1 from './ServicesSVGs/Blockchain.svg'
+import Logo2 from './ServicesSVGs/Analysis.svg'
+import Logo3 from './ServicesSVGs/Gem.svg'
 
 
 

@@ -9,7 +9,7 @@ import './Market_status.css'
 function Market_status() {
     return (
 
-        <div className="Market">
+        <div className="Market" id="marketStatus">
             <div className="image-effect"></div> 
             <h3 className="Market-text-style"><Text className="Gangsta"></Text></h3>
             

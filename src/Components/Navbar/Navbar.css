@@ -32,13 +32,12 @@
 
 
 
-
 .NavChange{
     background:rgb(23, 25, 36);
     width: 100%;
     position: relative;
     position: fixed;
-    z-index: 11;
+    z-index: 11111111;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -50,7 +49,7 @@
     width: 100%;
     position: relative;
     position: fixed;
-    z-index: 11;
+    z-index: 111111111111;
     height: 80px;
     display: flex;
     justify-content: center;
